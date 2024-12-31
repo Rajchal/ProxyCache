@@ -2,8 +2,9 @@ import axios from "axios";
 async function fetchChar(id){
    try{
     const character=await axios.get(
-        `https://rickandmortyapi.com/api/chracter/${id}`
+        `https://rickandmortyapi.com/api/character/${id}`
     )
+    return character.data;
    }catch(e){
        console.log(e);
    }    

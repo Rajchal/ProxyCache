@@ -19,17 +19,27 @@ const cacheHandler={
 
         const character=await fetchChar(id);
 
-        characterCache[id]={...character,time: new Date()}
+        //characterCache[id]={...character,time: new Date()}
 
         return character;
+    },
+    has:(target,key)=>{
+        return key in target;
+    },
+    set:(target,property,value)=>{
+        console.log(`Setting Porprrty ${property} to cache`);
+       return target[property]={...value,time:new Date()};
     }
 };
 
 const getCharacter = new Proxy (characterCache , cacheHandler)
 
 const character =await getCharacter[1];
-console.log({character});
 
-const character2 =await getCharacter[1];
-
+console.log('has character in cache',1 in getCharacter);
+if(!Boolean(1 in getCharacter)){
+    getCharacter[1]=character;
+}
+console.log({character});;
+const character2 =await getCharacter[2];
 console.log({character2});

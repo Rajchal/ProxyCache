@@ -12,7 +12,7 @@ const characterCache ={};
 
 const cacheHandler={
     get: async(target,id)=>{
-        if(target(id)){
+        if(target[id]){
             return target[id];
         }
 
@@ -24,11 +24,11 @@ const cacheHandler={
     }
 };
 
-const getChar = new Proxy (characterCache , cacheHandler)
+const getCharacter = new Proxy (characterCache , cacheHandler)
 
-const character =await getChar(1);
+const character =await getCharacter[1];
 console.log({character});
 
-const character2 =await getChar(1);
+const character2 =await getCharacter[1];
 
 console.log({character2});

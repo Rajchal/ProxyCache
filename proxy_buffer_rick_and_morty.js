@@ -2,7 +2,7 @@ import axios from "axios";
 async function fetchChar(id){
    try{
     const character=await axios.get(
-        `https://rickandmortyapi.com/api/chracter/${id}`;
+        `https://rickandmortyapi.com/api/chracter/${id}`
     )
    }
 }
@@ -16,7 +16,7 @@ const cacheHandler={
 
         const character=await fetchChar(id);
 
-        characterCacher[id]={...character,time: new Date()}
+        characterCache[id]={...character,time: new Date()}
 
         return character;
     }

@@ -1,0 +1,23 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "\"Buffer to store fetched item using proxy\"",
+  "main": "proxy_buffer_rick_and_morty.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rajchal/ProxyCache.git"
+  },
+  "author": "Anjal Rajchal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rajchal/ProxyCache/issues"
+  },
+  "homepage": "https://github.com/Rajchal/ProxyCache#readme",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}

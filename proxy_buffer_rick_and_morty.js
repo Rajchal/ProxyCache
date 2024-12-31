@@ -41,5 +41,5 @@ if(!Boolean(1 in getCharacter)){
     getCharacter[1]=character;
 }
 console.log({character});;
-const character2 =await getCharacter[2];
+const character2 =await getCharacter[1];
 console.log({character2});
